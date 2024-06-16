@@ -53,7 +53,7 @@ const Navbar = () => {
           }}
         >
           <p className='text-white text-[26px] lg:text-[36px] font-bold pointer-events-auto cursor-pointer flex'>
-            FK
+            KWIZ
           </p>
         </Link>
 
@@ -72,6 +72,18 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          <li
+              key={"resume"}
+              className={`relative flex items-center ${
+                active === "resume"? "text-white" : "text-slate-500"
+              } hover:text-white text-[18px] lg:text-[24px] font-bold pointer-events-auto cursor-pointer`}
+              onClick={() => setActive("resume")}
+            >
+              {active === "resume" && (
+                <div className="fixed right-10 w-2 h-6 lg:h-8 bg-quaternary"></div>
+              )}
+              <a href={`${"https://drive.google.com/file/d/10Ldx3bT5kfu4uzkquFPyDd98DO4_0OMT/view"}`}>Resume</a>
+            </li>
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -102,6 +114,7 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              
             </ul>
           </div>
         </div>

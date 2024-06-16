@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
-import { experiences } from "../data";
+import {  experiences} from "../data";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { textVariant } from "../utils/motion";
@@ -72,7 +72,7 @@ const Experience = () => {
     <div className="sm:my-20">
       <motion.div variants={textVariant()}>
         <h2 className={`${styles.sectionText} text-center`}>
-          Experience
+          Tools
         </h2>
       </motion.div>
 

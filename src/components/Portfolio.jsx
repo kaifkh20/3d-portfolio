@@ -1,4 +1,4 @@
-import { motion, useAnimation } from "framer-motion";
+import { color, motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -62,6 +62,10 @@ const Portfolio = () => {
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
+
+      <motion.div variants={textVariant()}>
+        <a href="https:/github.com/kaifkh20" className={`${styles.sectionText}`}>{"View More -"}</a>
+      </motion.div>
     </div>
   );
 };
